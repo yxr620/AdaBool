@@ -6,19 +6,17 @@ mkdir -p ./bin
 
 # Build
 nvcc -O3 -std=c++17 \
-    -I../src/ivf \
-    -I../simple_ivf/cutlass/include \
     -lstdc++fs \
-    ./tencent_q_all.cu \
-    -o ./bin/tencent_q_all
+    ./adsfilter_q_all.cu \
+    -o ./bin/adsfilter_q_all
 
-echo "Compilation completed. Executable: ./bin/tencent_q_all"
+echo "Compilation completed. Executable: ./bin/adsfilter_q_all"
 
 # Check if arguments are provided, if not use default paths
 if [ $# -eq 0 ]; then
     echo "Running test with default paths..."
-    ./bin/tencent_q_all ../dataset/tencent/filter.coo ../dataset/tencent
+    ./bin/adsfilter_q_all ../dataset/adsfilter/filter.coo ../dataset/adsfilter
 else
     echo "Running test with provided arguments..."
-    ./bin/tencent_q_all "$@"
+    ./bin/adsfilter_q_all "$@"
 fi

@@ -320,8 +320,8 @@ void PrintStats(const std::string& name, const Statistics& stats) {
 }
 
 int main(int argc, char** argv) {
-    std::string filter_path = "result/output/filter.coo";
-    std::string query_dir = "result/output";
+    std::string filter_path = "../dataset/adsfilter/filter.coo";
+    std::string query_dir = "../dataset/adsfilter";
 
     if (argc >= 2) filter_path = argv[1];
     if (argc >= 3) query_dir = argv[2];

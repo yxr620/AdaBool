@@ -304,14 +304,14 @@ void PrintStats(const std::string& name, const Statistics& stats) {
 
 void PrintUsage(const char* prog_name) {
     std::cout << "Usage: " << prog_name << " [filter_file] [query_dir] [batch_size]\n";
-    std::cout << "  filter_file: Path to filter.coo file (default: ../result/output/filter.coo)\n";
-    std::cout << "  query_dir:   Directory containing query files (default: ../result/output)\n";
+    std::cout << "  filter_file: Path to filter.coo file (default: ../dataset/adsfilter/filter.coo)\n";
+    std::cout << "  query_dir:   Directory containing query files (default: ../dataset/adsfilter)\n";
     std::cout << "  batch_size:  Number of queries per batch (default: 4, must be > 0)\n";
 }
 
 int main(int argc, char** argv) {
-    std::string filter_path = "../result/output/filter.coo";
-    std::string query_dir = "../result/output";
+    std::string filter_path = "../dataset/adsfilter/filter.coo";
+    std::string query_dir = "../dataset/adsfilter";
     uint32_t batch_size = 4;
 
     if (argc >= 2) filter_path = argv[1];
@@ -326,7 +326,7 @@ int main(int argc, char** argv) {
     }
 
     std::cout << "========================================\n";
-    std::cout << "  Tencent IVF Batch Test\n";
+    std::cout << "  AdsFilter Batch Query Test\n";
     std::cout << "========================================\n";
     std::cout << "Filter file: " << filter_path << std::endl;
     std::cout << "Query directory: " << query_dir << std::endl;

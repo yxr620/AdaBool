@@ -1,3 +1,4 @@
 .vscode
-dataset/tencent
+dataset/adsfilter
+adsfilter_dataset.tar.gz
 test/bin
